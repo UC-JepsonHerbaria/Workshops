@@ -61,20 +61,28 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background
 <!-- MAILCHIMP MODAL FORM -->
 
 <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false">
+
 </script>
 
 <script>function showMailingPopUp() {
  	require(["mojo/signup-forms/Loader"], function(L) { L.start({
  		"baseUrl":"mc.us9.list-manage.com",
  		"uuid":"05907f4b3bf3518d1cac49ff7",
- 		"lid":"18d4e8ed83"
+ 		"lid":"e926605e2d"
  	})
  		 })
 
-document.cookie = "MCEvilPopupClosed=; path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC";
+document.cookie = "MCPopupClosed=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/";
+
  };
+ 
+
 </script>
 <!--
+document.addEventListener("DOMContentLoaded", function(event) {
+  document.getElementById("open-mailchimp-subscribe-popup").onclick = function() {showMailingPopUp()};
+});
+2016-2017 code==>"lid":"18d4e8ed83"
 <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
 
 <script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us11.list-manage.com","uuid":"c96d829a677561646f4552358","lid":"f15e9f72a3"}) })</script>
